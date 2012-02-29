@@ -1,3 +1,7 @@
+# random
+alias gitx="open -a /Applications/GitX.app ."
+alias mate='open -a TextMate.app'
+
 # git
 alias gb="git branch -a"
 alias gc="git commit -a"
