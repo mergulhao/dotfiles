@@ -49,10 +49,6 @@ fi
 # rvm
 if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
 
-if [ -f ~/Desenvolvimento/goodies/console_goodies.sh ]; then
-  . ~/Desenvolvimento/goodies/console_goodies.sh
-fi
-
 # ssh identity add
 ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
 
