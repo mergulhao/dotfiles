@@ -1,19 +1,17 @@
 # If running interactively, then:
 if [ "$PS1" ]; then
 
-  # Aliases
+  # aliases
   if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
   fi
-	
-	#Exportando as Variaveis
-    HISTSIZE=5000
-    export HISTFILE=~/.history/${HOSTNAME} 
-    export HISTCONTROL=ignoredups
-#    export EDITOR="mate -w"
-#    export CVSEDITOR="mate -w"
-#    export SVN_EDITOR="mate -w"
-#    export GIT_EDITOR="mate -w"
+
+  # export
+  export HISTSIZE=5000
+  export HISTFILE=~/.history/${HOSTNAME}
+  export HISTCONTROL=ignoredups
+  export EDITOR="mate"
+  export GIT_EDITOR="mate"
 
     #Adiona os scripts no PATH.
     if [ -d ~/bin ]; then
