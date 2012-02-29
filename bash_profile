@@ -36,9 +36,15 @@ if [ "$PS1" ]; then
   }
 
   rvm_version() {
-    ~/.rvm/bin/rvm-prompt i v g
+    version=$(~/.rvm/bin/rvm-prompt i v g)
+
+    if [ -z "$version" ]; then
+      echo ""
+    else
+      echo "${version} "
+    fi
   }
-  PS1="$COLOR2\$(rvm_version) $COLOR3\u@\h$COLOR2:$COLOR1\w$COLOR2\$(parse_git_branch)$COLOR1\\$ $COLOR4$EOP"
+  PS1="$COLOR2\$(rvm_version)$COLOR3\u@\h$COLOR2:$COLOR1\w$COLOR2\$(parse_git_branch)$COLOR1\\$ $COLOR4$EOP"
 fi
 
 if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
