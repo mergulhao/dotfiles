@@ -56,6 +56,11 @@ fi
 # ssh identity add
 ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
 
+# bash bookmarks
+if [ -f ~/.bash_bashmarks ] ; then
+  . ~/.bash_bashmarks
+fi
+
 # git completion
 if [ -f ~/.bash_git_completion ] ; then
   . ~/.bash_git_completion
