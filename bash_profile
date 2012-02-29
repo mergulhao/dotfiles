@@ -46,6 +46,7 @@ if [ "$PS1" ]; then
   PS1="$COLOR2\$(rvm_version)$COLOR3\u@\h$COLOR2:$COLOR1\w$COLOR2\$(parse_git_branch)$COLOR1\\$ $COLOR4$EOP"
 fi
 
+# rvm
 if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
 
 if [ -f ~/Desenvolvimento/goodies/console_goodies.sh ]; then
