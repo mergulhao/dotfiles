@@ -1,3 +1,8 @@
+# temp
+alias vps='ssh vps'
+alias sl='rknock-sl start; ssh clientela-sl; rknock-sl stop'
+alias hz='ssh clientela-hz'
+
 # random
 alias gitx="open -a /Applications/GitX.app ."
 alias mate='open -a TextMate.app'
