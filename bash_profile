@@ -47,6 +47,7 @@ if [ -f ~/Desenvolvimento/goodies/console_goodies.sh ]; then
   . ~/Desenvolvimento/goodies/console_goodies.sh
 fi
 
-if [ -f ~/Desenvolvimento/bin/git_completion.sh ]; then
-  . ~/Desenvolvimento/bin/git_completion.sh
+# git completion
+if [ -f ~/.bash_git_completion ] ; then
+  . ~/.bash_git_completion
 fi
