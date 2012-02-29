@@ -8,7 +8,7 @@ namespace "install" do
     puts "Installing bin files"
     `mkdir -p ~/bin`
 
-    command = "ln -s /Applications/TextMate.app/Contents/Resources/mate ~/bin/mate"
+    command = "ln -nfs /Applications/TextMate.app/Contents/Resources/mate ~/bin/mate"
     puts command
     `#{command}`
   end
