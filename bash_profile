@@ -15,8 +15,8 @@ if [ "$PS1" ]; then
   export HISTSIZE=5000
   export HISTFILE=~/.history/${HOSTNAME}
   export HISTCONTROL=ignoredups
-  export EDITOR="mate"
-  export GIT_EDITOR="mate"
+  export EDITOR="mate -w"
+  export GIT_EDITOR="mate -w"
 
   # path
   export PATH=~/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/opt/local/lib/postgresql83/bin:/usr/local/mongodb/bin:$PATH
