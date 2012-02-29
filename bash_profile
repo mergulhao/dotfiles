@@ -1,5 +1,10 @@
 # If running interactively, then:
 if [ "$PS1" ]; then
+
+  # Aliases
+  if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+  fi
 	
 	#Exportando as Variaveis
     HISTSIZE=5000
