@@ -19,7 +19,7 @@ alias gm="git checkout master"
 
 # rails 
 alias c='rails c'
-alias ss='rails s'
+alias ss='rails s thin'
 alias int='rake integrate'
 alias migrate='rake db:migrate && rake db:test:clone'
 alias redo='rake db:migrate:redo && rake db:test:clone'
