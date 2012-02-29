@@ -19,10 +19,7 @@ if [ "$PS1" ]; then
   export GIT_EDITOR="mate"
 
   # path
-  if [ -d ~/bin ]; then
-    export PATH=$PATH:~/bin
-  fi
-  export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/opt/local/lib/postgresql83/bin:/usr/local/mongodb/bin:$PATH
+  export PATH=~/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/opt/local/lib/postgresql83/bin:/usr/local/mongodb/bin:$PATH
 
   # my colors
   COLOR1="\[\033[0;36m\]"
