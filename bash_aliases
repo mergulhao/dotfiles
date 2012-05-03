@@ -24,6 +24,7 @@ alias int='rake integrate'
 alias migrate='rake db:migrate && rake db:test:clone'
 alias redo='rake db:migrate:redo && rake db:test:clone'
 alias back='rake db:rollback && rake db:test:clone'
+alias seed='rake db:seed'
 
 # ruby
 
@@ -48,3 +49,5 @@ function mategem {
     $EDITOR $gemdir/$name
   fi
 }
+
+alias gemmate='mategem'
