@@ -18,6 +18,7 @@ alias ga="git add ."
 alias gm="git checkout master"
 
 # rails 
+alias f='foreman start'
 alias c='rails c'
 alias ss='rails s thin'
 alias int='rake integrate'
