@@ -1,3 +1,5 @@
 --type-add=ruby=.haml
+--type-add=html=.md
 --type-add=css=.scss
 --ignore-dir=coverage
+--ignore-dir=_site
