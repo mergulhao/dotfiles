@@ -5,3 +5,5 @@
 	branch = auto
 	interactive = auto
 	diff = auto
+[core]
+	excludesfile = /Users/mergulhao/.gitignore_global
