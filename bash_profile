@@ -44,7 +44,8 @@ if [ "$PS1" ]; then
 fi
 
 # rvm
-if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+PATH=$PATH:$HOME/.rvm/bin
 
 # ssh identity add
 ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
