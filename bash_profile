@@ -18,6 +18,9 @@ if [ "$PS1" ]; then
   export EDITOR="mate -w"
   export GIT_EDITOR="mate -w"
 
+  # foreman
+  export PORT=3000
+
   # ruby 1.9.3 gc improvements
   # https://gist.github.com/4136373
   # https://github.com/wayneeseguin/rvm/tree/master/patches/ruby/1.9.3/p374/railsexpress
