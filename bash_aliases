@@ -16,8 +16,9 @@ alias gta="git status"
 alias gr="git reset --hard"
 alias ga="git add ."
 alias gm="git checkout master"
+alias git=hub
 
-# rails 
+# rails
 alias f='foreman start'
 alias c='rails c'
 alias ss='rails s thin'
