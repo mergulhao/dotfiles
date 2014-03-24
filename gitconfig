@@ -11,3 +11,7 @@
 	excludesfile = /Users/mergulhao/.gitignore_global
 [push]
 	default = simple
+[help]
+	autocorrect = 1
+[rerere]
+	enabled = 1
