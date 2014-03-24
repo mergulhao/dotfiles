@@ -15,7 +15,14 @@
   autocorrect = 1
 [rerere]
   enabled = 1
+# more alias at: https://gist.github.com/igal/53855
 [alias]
+  a  = add
   ci = commit
+  st = status
+  co = checkout
+  d  = diff
+  dc = diff --cached
+  pullsrb = !git stash save && git pull --rebase && git stash pop && echo 'Success!'
 [include]
   path = ~/.gitconfig.local
