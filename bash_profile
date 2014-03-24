@@ -26,7 +26,7 @@ if [ "$PS1" ]; then
   # https://github.com/wayneeseguin/rvm/tree/master/patches/ruby/1.9.3/p374/railsexpress
   # https://github.com/skaes/rvm-patchsets
   export RUBY_GC_MALLOC_LIMIT=60000000
-  export RUBY_FREE_MIN=200000
+  export RUBY_GC_HEAP_FREE_SLOTS=200000
 
   # path
   export PATH=~/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/opt/local/lib/postgresql90/bin:/usr/local/mongodb/bin:$PATH
