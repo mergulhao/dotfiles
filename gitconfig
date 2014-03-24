@@ -1,19 +1,19 @@
 [user]
-	email = mergulhao83@gmail.com
-	name = Sylvestre Mergulhão
+  email = mergulhao83@gmail.com
+  name = Sylvestre Mergulhão
 [color]
-	status = auto
-	branch = auto
-	interactive = auto
-	diff = auto
-	ui = 1
+  status = auto
+  branch = auto
+  interactive = auto
+  diff = auto
+  ui = 1
 [core]
-	excludesfile = /Users/mergulhao/.gitignore_global
+  excludesfile = /Users/mergulhao/.gitignore_global
 [push]
-	default = simple
+  default = simple
 [help]
-	autocorrect = 1
+  autocorrect = 1
 [rerere]
-	enabled = 1
+  enabled = 1
 [alias]
-	ci = commit
+  ci = commit
