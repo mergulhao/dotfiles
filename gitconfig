@@ -19,7 +19,7 @@
 [alias]
   a  = add
   ci = commit
-  st = status
+  st = status -sb
   co = checkout
   d  = diff
   dc = diff --cached
