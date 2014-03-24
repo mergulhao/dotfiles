@@ -17,3 +17,5 @@
   enabled = 1
 [alias]
   ci = commit
+[include]
+  path = ~/.gitconfig.local
