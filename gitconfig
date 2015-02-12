@@ -21,8 +21,14 @@
   ci = commit
   st = status -sb
   co = checkout
-  d  = diff
+  d  = diff --word-diff
   dc = diff --cached
   pullsrb = !git stash save && git pull --rebase && git stash pop && echo 'Success!'
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  lg = log --graph --pretty=format:'%Cred%h%Creset %Cblue[%an]%Creset |%C(yellow) %s%Creset%d %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
+  pr = !ISSUE=$(git pull-request); open $ISSUE; unset ISSUE
+  i  = !ghi
+  io = !ghi show $1 -w
+  la = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 [include]
   path = ~/.gitconfig.local
