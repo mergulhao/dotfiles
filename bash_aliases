@@ -5,17 +5,9 @@ alias hz='ssh clientela-hz'
 
 # random
 alias gitx="open -a /Applications/GitX.app ."
+alias fullupdate='sudo softwareupdate -i -a; brew update; brew upgrade; rvm get latest --auto-dotfiles'
 
 # git
-alias gb="git branch -a"
-alias gc="git commit -a"
-alias gd="git diff | mate"
-alias gl="git pull"
-alias gp="git push"
-alias gta="git status"
-alias gr="git reset --hard"
-alias ga="git add ."
-alias gm="git checkout master"
 alias git=hub
 
 # rails
@@ -23,9 +15,9 @@ alias f='foreman start'
 alias c='rails c'
 alias ss='rails s thin'
 alias int='rake integrate'
-alias migrate='rake db:migrate && rake db:test:clone'
-alias redo='rake db:migrate:redo && rake db:test:clone'
-alias back='rake db:rollback && rake db:test:clone'
+alias migrate='rake db:migrate'
+alias redo='rake db:migrate:redo'
+alias back='rake db:rollback'
 alias seed='rake db:seed'
 alias unlock='rake integration:heroku:unlock'
 
