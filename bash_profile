@@ -29,7 +29,7 @@ if [ "$PS1" ]; then
   export RUBY_GC_HEAP_FREE_SLOTS=200000
 
   # path
-  export PATH=~/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/opt/local/lib/postgresql90/bin:/usr/local/mongodb/bin:$PATH
+  export PATH=~/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin/:$PATH
 
   # my colors
   COLOR1="\[\033[0;36m\]"
