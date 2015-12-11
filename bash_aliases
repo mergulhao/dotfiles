@@ -19,7 +19,7 @@ alias migrate='rake db:migrate'
 alias redo='rake db:migrate:redo'
 alias back='rake db:rollback'
 alias seed='rake db:seed'
-alias unlock='rake integration:heroku:unlock'
+alias unlock='rake jumpup:integration:unlock'
 
 # ruby
 
