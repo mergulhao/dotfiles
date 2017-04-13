@@ -30,5 +30,10 @@
   i  = !ghi
   io = !ghi show $1 -w
   la = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+  ignored = !git ls-files -v | grep "^[[:lower:]]"
 [include]
   path = ~/.gitconfig.local
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
