@@ -8,18 +8,28 @@ alias gitx="open -a /Applications/GitX.app ."
 alias fullupdate='sudo softwareupdate -i -a; brew update; brew upgrade; rvm get latest --auto-dotfiles'
 
 # git
-alias git=hub
+# alias git=hub
 
 # rails
-alias f='foreman start'
-alias c='rails c'
-alias ss='rails s thin'
-alias int='rake integrate'
-alias migrate='rake db:migrate'
-alias redo='rake db:migrate:redo'
-alias back='rake db:rollback'
-alias seed='rake db:seed'
-alias unlock='rake jumpup:integration:unlock'
+alias docker-up='docker-compose up'
+alias docker-down='docker-compose down && docker-clean'
+alias f='docker-compose run --service-ports app foreman start'
+alias c='docker-compose run app rails c'
+alias prod='docker-compose run app rake jumpup:production'
+alias rails='docker-compose run app rails'
+alias drake='docker-compose run app rake'
+alias int='docker-compose run app rake integrate'
+alias dbsetup='docker-compose run app rake db:setup'
+alias rspec='docker-compose run app rspec'
+alias migrate='docker-compose run app rake db:migrate'
+alias redo='docker-compose run app rake db:migrate:redo'
+alias back='docker-compose run app rake db:rollback'
+alias seed='docker-compose run app rake db:seed'
+alias unlock='docker-compose run app rake jumpup:integration:unlock'
+
+# docker
+alias docker-clean="docker ps -a | grep 'Exited\|Created' | cut -d ' ' -f 1 | xargs docker rm"
+alias docker-build='docker-compose build --build-arg GIT_USER_EMAIL=`git config user.email` --build-arg GIT_USER_NAME="`git config user.name`" app; docker-compose run app bundle'
 
 # ruby
 
