@@ -50,7 +50,8 @@ if [ "$PS1" ]; then
       echo "${version} "
     fi
   }
-  PS1="$COLOR2\$(rvm_version)$COLOR3\u@\h$COLOR2:$COLOR1\w$COLOR2\$(parse_git_branch)$COLOR1\\$ $COLOR4$EOP"
+  # PS1="$COLOR2\$(rvm_version)$COLOR3\u@\h$COLOR2:$COLOR1\w$COLOR2\$(parse_git_branch)$COLOR1\\$ $COLOR4$EOP"
+  PS1="$COLOR3\u@\h$COLOR2:$COLOR1\w$COLOR2\$(parse_git_branch)$COLOR1\\$ $COLOR4$EOP"
 fi
 
 # rvm
