@@ -31,6 +31,7 @@ alias unlock='docker-compose run app rake jumpup:integration:unlock'
 # docker
 alias docker-clean="docker ps -a | grep 'Exited\|Created' | cut -d ' ' -f 1 | xargs docker rm"
 alias docker-build='docker-compose build --build-arg GIT_USER_EMAIL=`git config user.email` --build-arg GIT_USER_NAME="`git config user.name`" app; docker-compose run app bundle'
+alias docker-build-node='docker-compose build app; docker-compose run app yarn'
 
 # ruby
 
