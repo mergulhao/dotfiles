@@ -7,6 +7,7 @@ alias hz='ssh clientela-hz'
 alias gitx="open -a /Applications/GitX.app ."
 alias fullupdate='sudo softwareupdate -i -a; brew update; brew upgrade; rvm get latest --auto-dotfiles'
 alias ll="ls -lah"
+alias rm-ds-store="find . -name '.DS_Store' -type f -delete"
 
 # git
 # alias git=hub
