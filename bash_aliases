@@ -6,6 +6,7 @@ alias hz='ssh clientela-hz'
 # random
 alias gitx="open -a /Applications/GitX.app ."
 alias fullupdate='sudo softwareupdate -i -a; brew update; brew upgrade; rvm get latest --auto-dotfiles'
+alias ll="ls -lah"
 
 # git
 # alias git=hub
