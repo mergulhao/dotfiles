@@ -8,6 +8,7 @@ alias gitx="open -a /Applications/GitX.app ."
 alias fullupdate='sudo softwareupdate -i -a; brew update; brew upgrade; rvm get latest --auto-dotfiles'
 alias ll="ls -lah"
 alias rm-ds-store="find . -name '.DS_Store' -type f -delete"
+alias git-clear-remotes="git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
 
 # git
 # alias git=hub
@@ -31,7 +32,7 @@ alias unlock='docker-compose run app rake jumpup:integration:unlock'
 
 # docker
 alias docker-clean="docker ps -a | grep 'Exited\|Created' | cut -d ' ' -f 1 | xargs docker rm"
-alias docker-build='docker-compose build --build-arg GIT_USER_EMAIL=`git config user.email` --build-arg GIT_USER_NAME="`git config user.name`" app; docker-compose run app bundle'
+alias docker-build="docker-compose build --build-arg GIT_USER_EMAIL=`git config user.email` --build-arg GIT_USER_NAME='`git config user.name`' app; docker-compose run app 'cp /tmp/Gemfile.lock /app/'; docker-compose run app bundle"
 alias docker-build-node='docker-compose build app; docker-compose run app yarn'
 
 # ruby
