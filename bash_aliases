@@ -8,7 +8,7 @@ alias gitx="open -a /Applications/GitX.app ."
 alias fullupdate='sudo softwareupdate -i -a; brew update; brew upgrade; rvm get latest --auto-dotfiles'
 alias ll="ls -lah"
 alias rm-ds-store="find . -name '.DS_Store' -type f -delete"
-alias git-clear-remotes="git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
+alias git-clear-remotes="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d"
 
 # git
 # alias git=hub
