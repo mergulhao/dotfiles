@@ -16,8 +16,9 @@ alias git-clear-remotes="git fetch -p && git branch -vv | awk '/: gone]/{print $
 # rails
 alias docker-up='docker-compose up'
 alias docker-down='docker-compose down && docker-clean'
-alias f='docker-compose run --service-ports app foreman start'
+alias f='docker-compose run --service-ports app foreman start -m all=1,release=0'
 alias c='docker-compose run app rails c'
+alias b='docker-compose run app bash'
 alias prod='docker-compose run app rake jumpup:production'
 alias rails='docker-compose run app rails'
 alias drake='docker-compose run app rake'
@@ -32,7 +33,7 @@ alias unlock='docker-compose run app rake jumpup:integration:unlock'
 
 # docker
 alias docker-clean="docker ps -a | grep 'Exited\|Created' | cut -d ' ' -f 1 | xargs docker rm"
-alias docker-build="docker-compose build --build-arg GIT_USER_EMAIL=`git config user.email` --build-arg GIT_USER_NAME='`git config user.name`' app; docker-compose run app 'cp /tmp/Gemfile.lock /app/'; docker-compose run app bundle"
+alias docker-build="docker-compose build --build-arg GIT_USER_EMAIL=`git config user.email` --build-arg GIT_USER_NAME='`git config user.name`' app; docker-compose run app bundle"
 alias docker-build-node='docker-compose build app; docker-compose run app yarn'
 
 # ruby
