@@ -70,3 +70,7 @@ fi
 if [ -f ~/.bash_git_completion ] ; then
   . ~/.bash_git_completion
 fi
+
+# colorls: https://github.com/athityakumar/colorls
+source $(dirname $(gem which colorls))/tab_complete.sh
+alias lc='colorls -lA --sd'
