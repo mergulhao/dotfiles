@@ -8,7 +8,7 @@ alias gitx="open -a /Applications/GitX.app ."
 alias fullupdate='sudo softwareupdate -i -a; brew update; brew upgrade; rvm get latest --auto-dotfiles'
 alias ll="ls -lah"
 alias rm-ds-store="find . -name '.DS_Store' -type f -delete"
-alias git-clear-remotes="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d"
+alias git-clear-remotes="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
 
 # git
 # alias git=hub
@@ -32,6 +32,7 @@ alias seed='docker-compose run app rake db:seed'
 alias unlock='docker-compose run app rake jumpup:integration:unlock'
 
 # docker
+alias docker-full-clean='(docker rmi -f $(docker images --no-trunc | grep "<none>" | awk "{print \$3}") 2>&1 | cat) && (docker ps --filter status=dead --filter status=exited -aq | xargs docker rm -v 2>&1 | cat) && (docker volume ls -qf dangling=true | xargs docker volume rm 2>&1 | cat)'
 alias docker-clean="docker ps -a | grep 'Exited\|Created' | cut -d ' ' -f 1 | xargs docker rm"
 alias docker-build="docker-compose build --build-arg GIT_USER_EMAIL=`git config user.email` --build-arg GIT_USER_NAME='`git config user.name`' app; docker-compose run app bundle"
 alias docker-build-node='docker-compose build app; docker-compose run app yarn'
