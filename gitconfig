@@ -31,6 +31,7 @@
   io = !ghi show $1 -w
   la = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
   ignored = !git ls-files -v | grep "^[[:lower:]]"
+  pf = push --force-with-lease
 [include]
   path = ~/.gitconfig.local
 [filter "lfs"]
